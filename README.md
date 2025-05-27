@@ -19,12 +19,41 @@ The official Mapify Model Context Protocol (MCP) server enables AI assistants li
 
 ---
 
+## 🔑 Getting Your API Key
+
+Before using the Mapify MCP Server, you'll need to obtain your API token from the Mapify platform.
+
+> 💡 **Already have an account?** Jump directly to [your settings page](https://mapify.so/app#show-settings) and skip to Step 3.
+
+### Step 1: Create Your Account
+Visit [mapify.so](https://mapify.so) and sign up for a free account.
+
+![Step 1: Sign up for Mapify](./docs/images/step1-signup.png)
+
+### Step 2: Access Main Dashboard
+After logging in, you'll see the main Mapify dashboard with your mind maps and tools.
+
+![Step 2: Mapify main dashboard](./docs/images/step2-dashboard.png)
+
+### Step 3: Open Account Settings  
+Click on your profile/account menu to access your account settings.
+
+![Step 3: Open account settings](./docs/images/step3-account-menu.png)
+
+### Step 4: Generate Your API Token
+Navigate to the "API Key" section and generate your API key. Copy and keep it secure!
+
+![Step 4: Generate and copy API token](./docs/images/step4-api-settings.png)
+
+> 🔒 **Security Note**: Treat your API key like a password. Never share it publicly or commit it to version control.
+
+---
+
 ## 🚀 Quick Start
 
 ### Prerequisites
 
 - **Node.js** (v16 or higher)
-- **Mapify API Token** - [Get yours here](https://mapify.so/app#show-settings)
 - **MCP-compatible client** (Claude Desktop, VS Code, Cursor, Continue, etc.)
 
 ### One-Click Installation
