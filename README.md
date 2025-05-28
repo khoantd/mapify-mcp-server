@@ -58,7 +58,7 @@ Navigate to the "API Key" section and generate your API key. Copy and keep it se
 
 ### Installation
 
-For **Claude Desktop**, add this configuration to your `claude_desktop_config.json`:
+For **Claude Desktop**, add this configuration to your `~/.claude/claude_desktop_config.json`:
 
 ```json
 {
