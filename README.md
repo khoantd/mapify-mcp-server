@@ -56,7 +56,7 @@ Navigate to the "API Key" section and generate your API key. Copy and keep it se
 - **Node.js** (v16 or higher)
 - **MCP-compatible client** (Claude Desktop, VS Code, Cursor, Continue, etc.)
 
-### One-Click Installation
+### Installation
 
 For **Claude Desktop**, add this configuration to your `claude_desktop_config.json`:
 
