@@ -51,10 +51,23 @@ Navigate to the "API Key" section and generate your API key. Copy and keep it se
 
 ## 🚀 Quick Start
 
+### Choose Your Deployment Method
+
+**Option 1: MCP Server (Recommended for AI assistants)**
+- Use with Claude Desktop, VS Code, Cursor, Continue, etc.
+- Follows the MCP protocol standard
+- Direct integration with AI assistants
+
+**Option 2: Cloudflare Workers (HTTP API)**
+- Deploy as a web service accessible via HTTP
+- Perfect for web apps, mobile apps, or any HTTP client
+- See [Cloudflare Deployment Guide](./README-CLOUDFLARE.md)
+
 ### Prerequisites
 
 - **Node.js** (v16 or higher)
-- **MCP-compatible client** (Claude Desktop, VS Code, Cursor, Continue, etc.)
+- **MCP-compatible client** (Claude Desktop, VS Code, Cursor, Continue, etc.) *[for MCP deployment]*
+- **Cloudflare account** *[for Workers deployment]*
 
 ### Installation
 
@@ -144,6 +157,7 @@ pnpm run build
 ## 🔗 Links
 
 - **🌟 Mapify Platform**: [mapify.so](https://mapify.so)
+- **☁️ Cloudflare Deployment**: [README-CLOUDFLARE.md](./README-CLOUDFLARE.md)
 - **🐛 Report Issues**: [GitHub Issues](https://github.com/xmindltd/mapify-mcp-server/issues)
 - **📖 MCP Specification**: [modelcontextprotocol.io](https://modelcontextprotocol.io)
 

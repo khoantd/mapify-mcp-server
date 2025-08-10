@@ -21,12 +21,15 @@ RUN pnpm run build
 # Create logs directory
 RUN mkdir -p logs
 
-# Expose port (if needed for monitoring)
-EXPOSE 3000
-
 # Set environment variables
 ENV NODE_ENV=production
-ENV MAPIFY_API_KEY=your-mapify-api-key-here
 
-# Start the application
-CMD ["node", "./build/index.js"]
+# Ensure proper stdio handling for MCP server
+ENV NODE_OPTIONS="--max-old-space-size=512"
+
+# Use tini for proper signal handling
+RUN apk add --no-cache tini
+ENTRYPOINT ["/sbin/tini", "--"]
+
+# Start the application with proper stdio handling
+CMD ["node", "--no-buffering", "./build/index.js"]

@@ -2,9 +2,13 @@ version: '3.8'
 
 services:
   mapify-mcp-server:
-    build: .
+    build: 
+      context: .
+      dockerfile: Dockerfile.runtime
     container_name: mapify-mcp-server
     restart: unless-stopped
+    stdin_open: true
+    tty: true
     environment:
       - NODE_ENV=production
       - MAPIFY_API_KEY=${MAPIFY_API_KEY}

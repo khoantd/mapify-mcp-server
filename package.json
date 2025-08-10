@@ -7,7 +7,11 @@
     "mapify-mcp-server": "bin/cli.mjs"
   },
   "scripts": {
-    "build": "tsc && node scripts/build-cli.js"
+    "build": "tsc && node scripts/build-cli.js",
+    "build:worker": "tsc -p tsconfig.worker.json && esbuild build/worker.js --bundle --outfile=dist/worker.js --format=esm --platform=neutral --target=es2022",
+    "dev:worker": "wrangler dev",
+    "deploy:worker": "wrangler deploy",
+    "clean": "rm -rf build dist"
   },
   "repository": {
     "type": "git",
@@ -25,9 +29,11 @@
     "zod": "^3.24.4"
   },
   "devDependencies": {
+    "@cloudflare/workers-types": "^4.0.0",
     "@types/node": "^22.15.17",
     "esbuild": "^0.25.5",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "wrangler": "^3.0.0"
   },
   "packageManager": "pnpm@9.15.3+sha512.1f79bc245a66eb0b07c5d4d83131240774642caaa86ef7d0434ab47c0d16f66b04e21e0c086eb61e62c77efc4d7f7ec071afad3796af64892fae66509173893a",
   "license": "MIT"

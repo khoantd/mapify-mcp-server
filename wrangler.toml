@@ -1,0 +1,25 @@
+name = "mapify-mcp-server"
+main = "dist/worker.js"
+compatibility_date = "2024-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+[env.production]
+vars = { }
+
+[env.development]
+vars = { }
+
+# Environment variables (set via CLI or Dashboard)
+# MAPIFY_API_KEY = "your_api_key_here"
+
+# KV namespaces are optional - comment out if not needed
+# [[kv_namespaces]]
+# binding = "KV"
+# id = "your_kv_namespace_id_here"
+# preview_id = "your_preview_kv_namespace_id_here"
+
+[build]
+command = "npm run build:worker"
+
+[vars]
+NODE_ENV = "production"
